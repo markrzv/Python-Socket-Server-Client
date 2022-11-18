@@ -3,8 +3,8 @@ import socket, pickle
 
 class Server:
     def __init__(self, address: str, port: int) -> None:
-        self.address = "127.0.0.1"
-        self.port = 12312
+        self.address = address
+        self.port = port
 
         self.server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self.server.bind((self.address, self.port))
