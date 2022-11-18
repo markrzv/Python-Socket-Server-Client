@@ -10,6 +10,7 @@ class Server:
         self.server.bind((self.address, self.port))
 
         print("Server running on", self.address, ":", self.port)
+    
     def listen_for_connections(self):
         # server is waiting for incoming connections (only 1)
         self.server.listen(1)
