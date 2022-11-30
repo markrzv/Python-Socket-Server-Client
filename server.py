@@ -17,6 +17,7 @@ class Server:
         connection, address = self.server.accept()
 
         print("Connection by", address)
+        return connection, address
     
     def run(self, connection, address):
         
@@ -39,7 +40,7 @@ class Server:
             
 
 server = Server("127.0.0.1", 12312)  
-server.listen_for_connections()     
+connection, address = server.listen_for_connections()     
 
 while True:
-    server.run()
+    server.run(connection, address)
