@@ -9,7 +9,7 @@ class Client:
         self.server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self.server.connect((self.server_address, self.server_port))
 
-        print("Connected to", self.address, ":", self.port)
+        print("Connected to", self.server_address, ":", self.server_port)
     
     def run(self):
         
